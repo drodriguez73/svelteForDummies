@@ -1,0 +1,22 @@
+# Svelte Install
+
+## Primer Paso - desde git bash
+
+**Requeriments**: Tener instalado Node.js
+
+Luego de leer la guia en github, [instalamos asi](https://github.com/sveltejs/svelte)
+
+A continuacion algunos apuntes personales.
+
+Para instalar svelte hay que clonar el repo en una carpeta. Lo que hace esto es simplemente bajar el npm kit q nos permitira crear plantillas para nuestros proyectos. Importante clonar en una carpeta cualquiera. **No** debe ser la misma que la del proyecto que vamos a desarrollar.
+
+
+`git clone https://github.com/sveltejs/svelte.git`
+
+
+## Segundo Paso - desde el windows CMD
+
+```
+cd svelte
+npm install
+```

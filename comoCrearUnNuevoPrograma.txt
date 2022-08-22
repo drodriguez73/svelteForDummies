@@ -1,0 +1,74 @@
+# Svelte - Primer Programa
+
+El siguiete resumen esta basado en los excelentes dos videos, el primero nos muestra paso a paso como crear nuestro primer programa utilizando la ultima version de svelte que al momento de escribir esto es la que utiliza vite 3.0. El segundo video nos muestra como migrar app desde rollup (version anterior que utilizaba svelte) a vite. Ademas este segundo video entra en mas detalles de que cosa es cada archivo.
+
+Creando nuestra primer app con [Svelte + Vite](https://www.youtube.com/watch?v=8YIGv78rj74)
+
+Migrando desde [Rollup a Vite](https://www.youtube.com/watch?v=J435Z9bfTG0)
+
+
+
+
+
+Una vez con el kit ya instalado, el siguiente comando va a permitir generar los templates o estruccutas para nuestro primer programa dentro de la carpeta lordHome (el mismo comando crea la carpeta en el path donde estamos parados)
+
+Svelte esta en pleno desarrollo por lo que recomiendo mirar la home de [Svelte](https://svelte.dev/)
+
+Echa esta aclaracion vamos con el comando.
+
+`npm create vite@latest lordHome -- --template svelte`
+
+Esto genera una carpeta ../lordHome con la estructura basica para arrancar a programar. Mas adelante veremos con un poco mas de detalle que son los archivos que hay en esta carpeta. Por ahora sabemos que acabamos de clonar un template basico desde github de svelte que esta preparado para utilizar **npm** y que el setup esta en el archivo package.json dentro de la misma capera.
+
+Como cualquier proyecto en javascript y node tenemos que instalar las dependencias
+
+`npm install`
+
+Dentro de la carpate *src* esta el codigo con el que vamos a programar. Tenemos un archivo **main.js** que es el encargado de generar el html y un componente **app.svelte** que es el contenido que va a pintar el main.js. La carpeta **lib** es otro lugar donde podemos tener mas componentes. (es otra forma de agruparlos).
+
+Ademas del codigo tenemos la carpeta assets donde podemos guardar imagenes o archivos que precise nuestro componente y asi los podamos importar.
+
+La carpea public tiene assets publicos y estaditos que para que el webserver los publique tal cual son.
+
+
+Por ultimo tenemos el archivo con la configuracion de [vite](https://vitejs.dev/) **vite.config.js** del cual por ahora solo nos va a interesar lo siguiente, veamos
+
+```
+{
+  "scripts": {
+    "dev": "vite", // start dev server, aliases: `vite dev`, `vite serve`
+    "build": "vite build", // build for production
+    "preview": "vite preview" // locally preview production build
+  }
+}
+```
+
+Lo mas comun es que mientras desarrollemos utilicemos:
+
+`npm run dev`
+
+Esto va a ejecutar el servidor con nuesta primer aplicacion funcionando. Por defecto el servidor corre en: http://localhost:5173
+
+Podemos ver mas parametros de configuracion ejecutando:
+
+`npx vite --help`
+
+Por ejemplo, si en modo desarrollo, queremos que escuche en todas las direccines y otro puerto
+
+`"dev": "vite --host 0.0.0.0 --port 8080"`
+
+## Segundo programa - Svelte Precios Crypto
+
+Vamos a dejar nuestro primer programa con la plantilla basica de un app svelte y a continuacion vamos a crear un segundo programa para ver precios de las criptomonedas.
+
+`npm create vite@latest preciosCripto -- --template svelte`
+
+Ahora seguimos los siguientes pasos:
+
+[Codigo completo de precios cripto](https://github.com/FaztWeb/svelte-coingecko-api)
+
+
+[Svelte Precios Crypto | Svelte & CoinGecko API](https://www.youtube.com/watch?v=uGhiM19d950) y arrancamos el tutorial para cosnumir datos desde la [API CoinGecko](https://www.coingecko.com/en/api/documentation)
+
+Lo estoy haciendo de cero y buscano como hace un [forEach](https://svelte.dev/repl/1da7dd2106194d8c8ecc51fce56299af?version=3.46.4) encontre esto
+
