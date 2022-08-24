@@ -1,8 +1,21 @@
 import './assets/app.css'
-import App from './App.svelte'
+import Izquierda from './Izquierda.svelte'
+import Centro from './Centro.svelte'
+import Derecha from './Derecha.svelte'
 
-const app = new App({
-  target: document.getElementById('app')
+const izquierda = new Izquierda({
+  target: document.getElementById('izquierda')
 })
 
-export default app
+const centro = new Centro({
+  target: document.getElementById('centro')
+})
+
+const derecha = new Derecha({
+  target: document.getElementById('derecha')
+})
+
+
+export default centro
+
+
