@@ -1,37 +1,108 @@
 # Svelte - Primer Programa
 
-El siguiete resumen esta basado en los excelentes dos videos, el primero nos muestra paso a paso como crear nuestro primer programa utilizando la ultima version de svelte que al momento de escribir esto es la que utiliza vite 3.0. El segundo video nos muestra como migrar app desde rollup (version anterior que utilizaba svelte) a vite. Ademas este segundo video entra en mas detalles de que cosa es cada archivo.
+El siguiete resumen esta basado en [Svelte + Vite](https://www.youtube.com/watch?v=8YIGv78rj74) donde nos muestra paso a paso como crear nuestro primer programa utilizando la ultima version (@svelte 3.49 y @vite 3.0.9)
 
-Creando nuestra primer app con [Svelte + Vite](https://www.youtube.com/watch?v=8YIGv78rj74)
+Ademas se basa en este otro [Migrar de Rollup a Vite](https://www.youtube.com/watch?v=J435Z9bfTG0) donde nos muestra como migrar app desde rollup (version anterior que utilizaba svelte) a vite. Ademas vemos mas detalles de que cosa es cada archivo.
 
-Migrando desde [Rollup a Vite](https://www.youtube.com/watch?v=J435Z9bfTG0)
-
-
-
-
-
-Una vez con el kit ya instalado, el siguiente comando va a permitir generar los templates o estruccutas para nuestro primer programa dentro de la carpeta lordHome (el mismo comando crea la carpeta en el path donde estamos parados)
-
-Svelte esta en pleno desarrollo por lo que recomiendo mirar la home de [Svelte](https://svelte.dev/)
-
-Echa esta aclaracion vamos con el comando.
+## Crear Plantillas
 
 `npm create vite@latest lordHome -- --template svelte`
 
-Esto genera una carpeta ../lordHome con la estructura basica para arrancar a programar. Mas adelante veremos con un poco mas de detalle que son los archivos que hay en esta carpeta. Por ahora sabemos que acabamos de clonar un template basico desde github de svelte que esta preparado para utilizar **npm** y que el setup esta en el archivo package.json dentro de la misma capera.
+La linea anterior genera los templates o estruccutas para nuestro primer programa dentro de la carpeta lordHome (el mismo comando crea la carpeta en el path donde estamos parados). Vale aclarar que siempre miren [La documentacion de Svelte](https://svelte.dev/) ya que esta en pleno desarrollo y cambia con mucha frecuencia por el momento (23/8/22)
+
+Bien, entoces acabamos de clonar un template basico desde github de svelte que esta preparado para utilizar **npm** y que el setup esta en el archivo package.json dentro de la misma capera.
 
 Como cualquier proyecto en javascript y node tenemos que instalar las dependencias
 
 `npm install`
 
-Dentro de la carpate *src* esta el codigo con el que vamos a programar. Tenemos un archivo **main.js** que es el encargado de generar el html y un componente **app.svelte** que es el contenido que va a pintar el main.js. La carpeta **lib** es otro lugar donde podemos tener mas componentes. (es otra forma de agruparlos).
+### Analizando el contenido de la carpeta de nuestro primer programa
 
-Ademas del codigo tenemos la carpeta assets donde podemos guardar imagenes o archivos que precise nuestro componente y asi los podamos importar.
+```
+- public
+  |
+  |-- css
+  |    |
+  |    |-- home.css
+  |
+- src
+  |
+  |-- assests
+  |    |
+  |    |-- svelte.svg
+  |
+  |-- lib
+  |    |
+  |    |-- Counter.svelte
+  |
+  |-- app.css
+  |-- App.svelte
+  |-- main.js
+  |-- vite-env.d.ts
+  |-
+- index.html
+- package.json
+- vite.config
+```
 
-La carpea public tiene assets publicos y estaditos que para que el webserver los publique tal cual son.
+index.html
+```
+<body>
+	<div id="app"></div>
+	<script type="module" src="/src/main.js"></script>
+</body>
+```
+
+main.js
+```
+import './app.css'
+import App from './App.svelte'
+
+const app = new App({
+  target: document.getElementById('app')
+})
+
+export default app
+```
+
+App.svelte
+```
+<script>
+  import svelteLogo from './assets/svelte.svg'
+  import Counter from './lib/Counter.svelte'
+</script>
+
+<main>
+  <div class="card">
+    <Counter />
+  </div>
+</main>
+
+<style>
+</style>
+```
+
+Counter.svelte
+```
+<script>
+  let count = 0
+  const increment = () => {
+    count += 1
+  }
+</script>
+
+<button on:click={increment}>
+  count is {count}
+</button>
+```
+
+CSS hojas de estilos
+
+Las podemos configurar desde el index.html utilizando el tag **link href**, desde el main.js utilizando **import ./assets/app.css** o desde dentro del mismo componente utilizando **style**
 
 
-Por ultimo tenemos el archivo con la configuracion de [vite](https://vitejs.dev/) **vite.config.js** del cual por ahora solo nos va a interesar lo siguiente, veamos
+
+Sevelte utiliza a vite como front end server y herramienta de compilacion, la conf esta en [vite.config.js](https://vitejs.dev/)
 
 ```
 {
@@ -56,6 +127,8 @@ Podemos ver mas parametros de configuracion ejecutando:
 Por ejemplo, si en modo desarrollo, queremos que escuche en todas las direccines y otro puerto
 
 `"dev": "vite --host 0.0.0.0 --port 8080"`
+
+
 
 ## Segundo programa - Svelte Precios Crypto
 

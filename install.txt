@@ -20,3 +20,20 @@ Para instalar svelte hay que clonar el repo en una carpeta. Lo que hace esto es 
 cd svelte
 npm install
 ```
+
+## Donde esta instalado
+
+El kit lo tengo instalado en las siguientes pc
+
+**Maquina Virtual** que corre en la ofi del laburo
+
+- Path: C:/Users/programador/Documents/informatica.bitbucket/svelte_lib
+- Fecha: 23-8-2022
+
+Version:
+```
+@sveltejs/vite-plugin-svelte@1.0.1
+svelte@3.49.0
+vite@3.0.9
+```
+
