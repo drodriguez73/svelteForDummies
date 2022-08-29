@@ -96,10 +96,10 @@ Counter.svelte
 </button>
 ```
 
-CSS hojas de estilos
+**CSS hojas de estilos**
 
-Las podemos configurar desde el index.html utilizando el tag **link href**, desde el main.js utilizando **import ./assets/app.css** o desde dentro del mismo componente utilizando **style**
-
+Las podemos configurar desde el index.html utilizando el tag **link href** apuntando al archivo css dentro de la carpeta public, desde el main.js utilizando **import ./assets/app.css** donde cada modulo tiene su archivi css o desde dentro del mismo componente utilizando el **tag style**.
+Ambos archivos css tienen visibilidad global y se pisan uno al otro en caso de tags con nombres duplicados, en cambio el codigo css dentro del tag style es unico, el compilador svelte se encaga de los id para que no se pisen.
 
 
 Sevelte utiliza a vite como front end server y herramienta de compilacion, la conf esta en [vite.config.js](https://vitejs.dev/)
@@ -129,8 +129,11 @@ Por ejemplo, si en modo desarrollo, queremos que escuche en todas las direccines
 `"dev": "vite --host 0.0.0.0 --port 8080"`
 
 
+## Segundo programa
 
-## Segundo programa - Svelte Precios Crypto
+Aqui vamos a contruir el marco y layout para las pantallas del bot de cripto.
+
+## Precios Crypto
 
 Vamos a dejar nuestro primer programa con la plantilla basica de un app svelte y a continuacion vamos a crear un segundo programa para ver precios de las criptomonedas.
 

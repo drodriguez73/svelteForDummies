@@ -4,7 +4,10 @@ import Centro from './Centro.svelte'
 import Derecha from './Derecha.svelte'
 
 const izquierda = new Izquierda({
-  target: document.getElementById('izquierda')
+  target: document.getElementById('izquierda'),
+  props: {
+    prop_externo: "Hola Mundo A"
+  }
 })
 
 const centro = new Centro({
@@ -12,10 +15,16 @@ const centro = new Centro({
 })
 
 const derecha = new Derecha({
-  target: document.getElementById('derecha')
+  target: document.getElementById('derecha'),
+  props: {
+    prop_externo: "Hola Mundo C"
+  }
+
 })
 
+//export default centro, ni idea que es lo que hace, ya que si la quito todo funciona igual.
 
-export default centro
+
+
 
 
