@@ -1,4 +1,17 @@
 <script>
+    //Especie - Open - High - Low - Close - Last - Volume - Vto. - C.cpra. - P.cpra. - P.vta. - C.vta.
+    let datos = [
+        ['aluar', 185, 189, 183, 0, 186, 14254, '48hs', 10, 185, 186, 2],
+        ['byma', 326, 333, 326, 0, 330, 1532, '48hs', 11, 327, 330, 3],
+        ['edn', 215, 218, 214, 0, 217, 20023, '48hs', 12, 215, 217, 4]
+    ]
+
+    let precios = new Map();
+
+    datos.forEach(function(precio, indice, datos) {
+        precios.set(precio[0], precio)
+    })
+
 </script>
 
 <main>
@@ -13,36 +26,20 @@
         <div class="titulo">Minimo</div>
         <div class="titulo">Maximo</div>
         <div class="titulo">Ultimo</div>
-        <div>ALUA</div>
-        <div>48hs.</div>
-        <div>204</div>
-        <div>145,000</div>
-        <div>145,250</div>
-        <div>1000</div>
-        <div>146</div>
-        <div>142</div>
-        <div>147</div>
-        <div>145,250</div>
-        <div>BYMA</div>
-        <div>48hs.</div>
-        <div>1248</div>
-        <div>192.750</div>
-        <div>193.000</div>
-        <div>474</div>
-        <div>200</div>
-        <div>191.750</div>
-        <div>201</div>
-        <div>193.000</div>
-        <div>EDN</div>
-        <div>48hs.</div>
-        <div>100</div>
-        <div>100.000</div>
-        <div>101.500</div>
-        <div>5000</div>
-        <div>102.450</div>
-        <div>95</div>
-        <div>103</div>
-        <div>101.500</div>
+
+        {#each [...precios.keys()] as key}
+            <div>{precios.get(key)[0]}</div>
+            <div>{precios.get(key)[7]}</div>
+            <div>{precios.get(key)[8]}</div>
+            <div>{precios.get(key)[9]}</div>
+            <div>{precios.get(key)[10]}</div>
+            <div>{precios.get(key)[11]}</div>
+            <div>{precios.get(key)[1]}</div>
+            <div>{precios.get(key)[3]}</div>
+            <div>{precios.get(key)[2]}</div>
+            <div>{precios.get(key)[10]}</div>
+        {/each}
+
     </div>
 
 </main>
