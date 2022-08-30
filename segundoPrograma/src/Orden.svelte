@@ -5,7 +5,7 @@
     <div class="orden">
         <fieldset>
 
-            <div class="Especie">
+            <div class="especie">
                 <label for="especie">Especie</label>
                 <input type="text" id="especie" name="especie">
             </div>

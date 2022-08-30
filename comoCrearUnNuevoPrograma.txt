@@ -131,7 +131,8 @@ Por ejemplo, si en modo desarrollo, queremos que escuche en todas las direccines
 
 ## Segundo programa
 
-Aqui vamos a contruir el marco y layout para las pantallas del bot de cripto.
+Aqui vamos a contruir el marco y layout para las pantallas del bot de cripto. En primer lugar tomamos la maqueta estatica que hicimos en html y css y la pegamos tal cual al codigo. En segundo lugar reemplazamos para la ventana de precios los valores puestos a mano en el codigo html por codigo javascript.
+
 
 ## Precios Crypto
 
