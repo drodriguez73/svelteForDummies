@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="orden.css" />
+</head>
+
+<body>
+    <div class="orden">
+        Nueva Orden
+        <fieldset>
+
+            <div class="Especie">
+                <label for="especie">Especie</label>
+                <input type="text" id="especie" name="especie">
+            </div>
+
+            <div class="especie_detalle">
+                <div class="tabla">
+                    <div class="titulo">Plazo</div>
+                    <div class="titulo">Ult. operado</div>
+                    <div class="titulo">Compra</div>
+                    <div class="titulo">Venta</div>
+
+                    <div>CI</div>
+                    <div>145</div>
+                    <div>141</div>
+                    <div>148</div>
+
+                    <div>24</div>
+                    <div>145</div>
+                    <div>141</div>
+                    <div>148</div>
+
+                    <div>48</div>
+                    <div>145</div>
+                    <div>141</div>
+                    <div>148</div>
+
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <div class="cantidad">
+                <label for="cantidad">Cantidad</label>
+                <input type="text" id="cantidad" name="cantidad">
+                <label for="precio">Precio</label>
+                <input type="text" id="precio" name="precio">
+
+            </div>
+			</fieldset>
+			
+			<fieldset>			
+            <div class="plazo">
+                <label for="opt_ci">CI</label>
+                <input type="radio" id="opt_ci" name="plazo" value="ci" checked>
+                <label for="opt_24">24Hs</label>
+                <input type="radio" id="opt_24" name="plazo" value="24">
+                <label for="opt_48">48Hs</label>
+                <input type="radio" id="opt_48" name="plazo" value="48">
+            </div>
+			</fieldset>
+			
+			<fieldset>
+            <div class="operacion">
+                <label for="opt_compra">Compra</label>
+                <input type="radio" id="opt_compra" name="side" value="compra" checked>
+                <label for="opt_venta">Venta</label>
+                <input type="radio" id="opt_venta" name="side" value="venta">
+            </div>
+        </fieldset>
+    </div>
+</body>
+
+</html>

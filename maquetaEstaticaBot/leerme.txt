@@ -1,0 +1,5 @@
+# Maqueta BOT
+
+Aca tiramos todo el diseño estatico para el bot. Es donde hago las practicas de css al mismo tiempo que la pagina del Bot va tomando forma. El css de la maqueta utiliza el grid layout.
+
+
