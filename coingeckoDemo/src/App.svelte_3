@@ -1,0 +1,81 @@
+<script>
+  import { onMount } from 'svelte';
+
+  const url_coingecko = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false";
+
+  var precios = [];
+
+  async function get_data() {
+    const res = await fetch(url_coingecko);
+    return await res.json();
+
+  }
+  
+  function handleClick() {
+    let resultadoA = get_data().then(
+        data => {
+            precios = data;
+            console.log(data);    
+        }
+    )    
+  }
+  
+
+</script>
+
+<main>
+  <div>
+    <button on:click={handleClick}>Recargar</button>
+  </div>
+
+  <div class="precios">
+    {#await precios}
+      <div>Recuperando datos de Coingecko</div>
+
+    {:then coins}
+
+      <div class="titulo">Coin</div>
+      <div class="titulo">#</div>
+      <div class="titulo">Nombre</div>
+      <div class="titulo">Precio</div>
+      <div class="titulo">24h %</div>
+      <div class="titulo">Min. 24h</div>
+      <div class="titulo">Max. 24h</div>
+      <div class="titulo">Vol. 24h</div>
+      <div class="titulo">Cap.</div>
+
+
+      {#each coins as coin}
+        <div>{coin.symbol}</div>
+        <div>{coin.market_cap_rank.toString()}</div>
+        <div>{coin.name}</div>
+        <div>{(Math.round(coin.current_price * 100) / 100).toFixed(2)}</div>
+        <div>{(Math.round(coin.price_change_percentage_24h * 100) / 100).toFixed(2)}</div>
+        <div>{(Math.round(coin.low_24h * 100) / 100).toFixed(2)}</div>
+        <div>{(Math.round(coin.high_24h * 100) / 100).toFixed(2)}</div>
+        <div>{coin.total_volume.toString()}</div>
+        <div>{coin.market_cap.toString()}</div>
+        
+      {/each}
+    
+    {:catch e}
+      <div>Error en fetch</div>
+      <div>e</div>
+
+    {/await}
+  </div>
+
+</main>
+
+<style>
+  .precios {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  
+  .titulo {
+    font-weight: bold;
+  }
+
+</style>
+

@@ -7,10 +7,11 @@
     ]
 
     let precios = new Map();
-
-    datos.forEach(function(precio, indice, datos) {
-        precios.set(precio[0], precio)
-    })
+    
+    function crear_map_de_datos(precio, indice, arreglo) {
+        precios.set(precio[0], precio);
+    }
+    datos.forEach(crear_map_de_datos);
 
 </script>
 
@@ -47,7 +48,7 @@
 <style>
 .precios {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(10, 1fr);
 }
 
 .precios > div {

@@ -1,49 +1,14 @@
 .precios {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: repeat(14, 1fr);
 }
 
 .precios > div {
 	margin: 2px;
 	padding: 5px;
-	background: palegreen;
+	background:  #a9dfbf ;
 }
 
-.precios > div:nth-child(10n+2) {
-	background: lemonchiffon;
-}
-
-.precios > div:nth-child(10n+3) {
-	background: palegreen;
-}
-
-.precios > div:nth-child(10n+4) {
-	background: lemonchiffon;
-}
-
-.precios > div:nth-child(10n+5) {
-	background: palegreen;
-}
-
-.precios > div:nth-child(10n+6) {
-	background: lemonchiffon;
-}
-
-.precios > div:nth-child(10n+7) {
-	background: palegreen;
-}
-
-.precios > div:nth-child(10n+8) {
-	background: lemonchiffon;
-}
-
-.precios > div:nth-child(10n+9) {
-	background: palegreen;
-}
-
-.precios > div:nth-child(10n+10) {
-	background: lemonchiffon;
-}
 
 .titulo {
 	font-weight: bold;

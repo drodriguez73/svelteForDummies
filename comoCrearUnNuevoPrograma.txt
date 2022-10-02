@@ -12,7 +12,7 @@ La linea anterior genera los templates o estruccutas para nuestro primer program
 
 Bien, entoces acabamos de clonar un template basico desde github de svelte que esta preparado para utilizar **npm** y que el setup esta en el archivo package.json dentro de la misma capera.
 
-Como cualquier proyecto en javascript y node tenemos que instalar las dependencias
+Como cualquier proyecto en javascript y node tenemos que instalar las dependencias, entonces, entramos a la carpeta lordHome y ejecutaos:
 
 `npm install`
 
@@ -133,19 +133,4 @@ Por ejemplo, si en modo desarrollo, queremos que escuche en todas las direccines
 
 Aqui vamos a contruir el marco y layout para las pantallas del bot de cripto. En primer lugar tomamos la maqueta estatica que hicimos en html y css y la pegamos tal cual al codigo. En segundo lugar reemplazamos para la ventana de precios los valores puestos a mano en el codigo html por codigo javascript.
 
-
-## Precios Crypto
-
-Vamos a dejar nuestro primer programa con la plantilla basica de un app svelte y a continuacion vamos a crear un segundo programa para ver precios de las criptomonedas.
-
-`npm create vite@latest preciosCripto -- --template svelte`
-
-Ahora seguimos los siguientes pasos:
-
-[Codigo completo de precios cripto](https://github.com/FaztWeb/svelte-coingecko-api)
-
-
-[Svelte Precios Crypto | Svelte & CoinGecko API](https://www.youtube.com/watch?v=uGhiM19d950) y arrancamos el tutorial para cosnumir datos desde la [API CoinGecko](https://www.coingecko.com/en/api/documentation)
-
-Lo estoy haciendo de cero y buscano como hace un [forEach](https://svelte.dev/repl/1da7dd2106194d8c8ecc51fce56299af?version=3.46.4) encontre esto
 

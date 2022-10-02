@@ -93,7 +93,7 @@
   
   .tabla {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: repeat(4, 1fr);
   }
   .tabla > div {
     margin: 2px;
