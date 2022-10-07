@@ -9,6 +9,8 @@
 
 # Precios criptro
 
+Los precios los tomamos de [CoinGecko Cryptocurrency Prices by Market Cap](https://www.coingecko.com/)
+
 El onjetivo es imitar el siguinte ejemplo [Codigo completo de precios cripto](https://github.com/FaztWeb/svelte-coingecko-api) pero utilizando toda la potencia de [Svelte con Bloques await](https://www.youtube.com/watch?v=uaqG_kVsPTU)
 
 
