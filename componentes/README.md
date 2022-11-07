@@ -10,3 +10,19 @@ En esta oportunidad para trabajar con el codigo camos a utilizar dos componentes
 Como [importar](https://www.youtube.com/watch?v=2zn5666nMfE) componentes interiores
 Como propagar un evento clic hacia el componente superior utilizando [createEventDispacher](https://www.youtube.com/watch?v=q0jXgqUef6E)
 Como propagar [datos](https://www.youtube.com/watch?v=aowIaNGW3pw) junto con el evento clic hacia el componente superior
+
+
+## Formularios
+
+PrimerFormulario.svelte tiene el codigo con los primeros pasos para creat un formulario en svelte
+
+Seguimos esta ejemplo [Handling Forms in Svelte](https://www.thisdot.co/blog/handling-forms-in-svelte)
+
+
+## Por resolver
+
+Me queda claro como enviar eventos hacia el componente superior y como enviar datos hacia el componente inferior.
+Ahora como hago para enviar los datos del formulario hacia el componente superior
+
+Six ways to share data between Svelte 3 components (Part-1)
+	https://ashutosh.dev/six-ways-to-share-data-between-svelte-3-components/

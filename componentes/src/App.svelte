@@ -1,6 +1,8 @@
 <script>
   import Precios from "./lib/Precios.svelte";
   import Favoritos from "./lib/Favoritos.svelte";
+  import PrimerFormulario from "./lib/PrimerFormulario.svelte";
+
 
   //url_coingecko
   const btc_uri =
@@ -21,6 +23,7 @@
     },
   };
 
+  
   async function get_data(uri) {
     let res = await fetch(uri, { cache: "no-store" });
     return await res.json();
@@ -34,16 +37,25 @@
       btc = data;
     });
   }
+
 </script>
 
 <main>
   <h1>Componentes</h1>
 
   <div>
+    <h1>Programando nuestro primer formulario</h1>
+    <PrimerFormulario/>
+
+  </div>
+
+  <div>
+    <h1>Precio de bitcoin - Coingecko</h1>
     <Favoritos my_coin={btc} />
   </div>
 
   <div>
+    <h1>Precios cripto monedas - Coingecko</h1>
     <Precios my_coins={coins} on:leerPrecios={leerPrecios} />
   </div>
 
