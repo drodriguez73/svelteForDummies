@@ -1,7 +1,7 @@
 {
-  "name": "primerprograma",
+  "name": "svelte_tailwind",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,8 +9,8 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.1",
-    "svelte": "^3.49.0",
-    "vite": "^3.0.7"
+    "@sveltejs/vite-plugin-svelte": "^1.1.0",
+    "svelte": "^3.52.0",
+    "vite": "^3.2.3"
   }
 }

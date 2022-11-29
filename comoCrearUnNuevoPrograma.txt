@@ -6,6 +6,8 @@ Ademas se basa en este otro [Migrar de Rollup a Vite](https://www.youtube.com/wa
 
 ## Crear Plantillas
 
+*ver nota al final de este parrafo*
+
 `npm create vite@latest lordHome -- --template svelte`
 
 La linea anterior genera los templates o estruccutas para nuestro primer programa dentro de la carpeta lordHome (el mismo comando crea la carpeta en el path donde estamos parados). Vale aclarar que siempre miren [La documentacion de Svelte](https://svelte.dev/) ya que esta en pleno desarrollo y cambia con mucha frecuencia por el momento (23/8/22)
@@ -15,6 +17,12 @@ Bien, entoces acabamos de clonar un template basico desde github de svelte que e
 Como cualquier proyecto en javascript y node tenemos que instalar las dependencias, entonces, entramos a la carpeta lordHome y ejecutaos:
 
 `npm install`
+
+Nota:
+
+*Cuando arranque a utilizar tailwind como libreria para los estilos me resulto mucho mas facil y rapido crear los proyectos sin utilizar la plantilla. Para aprender sobre tailwind esta la carpeta tailwind_css_demo, y como recursos adicionales estan mi_sveltle_template y mi sveltle_tailwind_template, plantillas para programar un proyecto con sveltle y otro con sveltle mas tailwind*
+
+
 
 ### Analizando el contenido de la carpeta de nuestro primer programa
 
@@ -27,7 +35,7 @@ Como cualquier proyecto en javascript y node tenemos que instalar las dependenci
   |
 - src
   |
-  |-- assests
+  |-- assets
   |    |
   |    |-- svelte.svg
   |
