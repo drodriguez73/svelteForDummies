@@ -1,24 +1,37 @@
-# svelteForDummies
-Learning Javascrtip & Svelte
+# Learning Javascrtip & Svelte
 
-Esta es un simple y sencilla guia donde fui tomando apuntes e implementando codigo hasta lograr ejemplos que funcionan. Mi principal fuente de aprendizaje de svlete es el siguiente canal de youtube del señor [Makigas](https://www.youtube.com/c/makigas)
+## What is Svelte?
 
-Es de ahi donde arranque a ver cada uno de sus videos sobre svelte y tomar apuntes que los dividi asi, *install.txt* nos ayuda para instalar svelte en windows y *comoCrearUnNuevoPrograma.txt* son apuntes que fui tomando a medida que programaba cada unos de los ejemplos.
+Svelte is a tool for building fast web applications.
 
-### Ejemplos funcionales
+It is similar to JavaScript frameworks such as React and Vue, which share a goal of making it easy to build slick interactive user interfaces. But there's a crucial difference: Svelte converts your app into ideal JavaScript at build time, rather than interpreting your application code at run time.
 
-Tenemos 2 ejemplos:
-- PrimerPrograma
-- SegundoPrograma
+## Si es igual q Vue y React, por que elegi a Svelte?
+
+Soy nuevo en javascript y realmente se muy poco, claramente arranque con React, Angular y tambien Vue pero me resulto complicado y la curva de apredizaje me termino derrorando. Googleando llegue a svelte y me resulto super facil ya que no me obligo a saber de javascript. Svelte tiene muchisimos componentes listos para utilizar, copiar y pergar y de lenguage muy natural y facil de entender, que luego al momento de compilar se va a generar el codigo javascript totalmente transparente para nosotros.
+
+Esto a su vez trae otras ventajas segun cuentas sus evngelizadores:
+
+- You don't pay the performance cost of the framework's abstractions, and you don't incur a penalty when your app first loads.
 
 
-En *PrimerPrograma* aprendemos a utilizar la herramienta por consola para crear la estructura basica de la app, identificar cada uno de sus componentes y un poco mas sobre vite.
+## Guia con mis primeros pasos.
 
-En *segundoPrograma* trabajamso con codigo estatico, tomando como base el diseño de pantallas que tenemos en la carpeta **maquetaEstaticaBot** lo incorporamos a svelte para seguir aprendiendo un poco mas.
+Mi principal fuente de aprendizaje de svlete es el siguiente canal de youtube del señor [Makigas](https://www.youtube.com/c/makigas)
 
-# Run
+Es de ahi donde arranque a ver cada uno de sus videos sobre svelte y tomar apuntes organizados en distintos ejemplos.
 
-Para ejecutar cada uno de los codigos entramos en la carpeta youtube
+1. Arranquen con mi primerPrograma y segundoPrograma para hacer los primeros pasos. 
+2. Sigan con criptoNodeFetch que es javascript puero mas resultados por consola, sin nada de svelte pero que les va a reultar practico para entender la api de coingecko, luego sigan con coingeckoDemo donde van consumir una api y mostrar los resultados ahora si con svelte.
+3. Componentes en svelte
+4. tailwind
 
-`npm run dev`
+## Vite
+
+Svelte se integra muy bien con [vite](https://vitejs.dev/guide/) ofreciendonos en primer lugar un dev server local para correr nuestra app haciendo el desarrolo muy sencillo de testear. Ademas una poderosa herramienta para hacer el build de nuesta app, tanto para el dev server como para produccion
+
+You don't need to set up the Server Side Rendering (SSR Dev server) because svelte-hmr already does the magic under the hood. Simple, corra el siguiente comando y su app va a estar funcionando `npm run dev`. Al momento de ir a [produccion](https://vitejs.dev/guide/build.html) simplemente corra `npm run build` command y lleve el build a su servidor estatico.
+
+
+
 
