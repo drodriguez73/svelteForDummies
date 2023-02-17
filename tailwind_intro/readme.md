@@ -43,7 +43,7 @@ npx tailwindcss init -p
 
 y a tailwind.config.cjs lo editamos reemplazando la siguiente linea `content: ['./src/**/*.{html,js,svelte,ts}'],`
 
-Creamos en archivo svelte.config.js y lo guardamos en el root del proyecto con el siguiente codigo:
+Creamos el archivo svelte.config.js y lo guardamos en el root del proyecto con el siguiente codigo:
 
 ```
 import preprocess from "svelte-preprocess";
