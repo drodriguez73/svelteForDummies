@@ -34,7 +34,7 @@ npm install
 Instalamos las dependencias e inicializamos los archivos, en este paso se va a crear dos archivos
 
 - tailwind.config.cjs 
-- postcss.config.cjs (a este lo borramos??? no lo borre y funca tambien??? raro)
+- postcss.config.cjs
 
 ```
 npm install -D tailwindcss postcss postcss-load-config autoprefixer svelte-preprocess

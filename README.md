@@ -2,9 +2,10 @@
 
 ## What is Svelte?
 
-Svelte is a tool for building fast web applications.
+[Svelte](https://svelte.dev/) es un framework [reactivo](https://jonmircha.com/reactividad-javascript) a los datos y con un lenguaje [declarativo](https://styde.net/programacion-declarativa-vs-imperativa/) for building fast web applications.
 
-It is similar to JavaScript frameworks such as React and Vue, which share a goal of making it easy to build slick interactive user interfaces. But there's a crucial difference: Svelte converts your app into ideal JavaScript at build time, rather than interpreting your application code at run time.
+
+It is similar to JavaScript frameworks such as React, Angular, Vue, which share a goal of making it easy to build slick interactive user interfaces. But there's a crucial difference: Svelte converts your app into ideal JavaScript at build time, rather than interpreting your application code at run time.
 
 ## Si es igual q Vue y React, por que elegi a Svelte?
 
